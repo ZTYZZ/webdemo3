@@ -1,0 +1,71 @@
+/*
+在实现这个项目的时候,很深刻的体会就是
+内敛标签和块标签
+
+页面的摆放顺序就是按照内联标签和块标签决定的.正常情况下就是从上到下依次排列
+
+而css中提供了类似浮动float position 来改变布局的方法.
+
+就像在实现self_logo的时候:
+本来是在
+在html中,
+
+2.css样式中的display,这是控制布局的属性 意思就是展示,页面以哪种布局展现出来
+    参数有:block ,inline , none,其他display
+    链接在这里:http://zh.learnlayout.com/display.html
+3.关于max-width:
+如果使用width:60px;
+        margin:0px auto.
+        在缩小窗口或者在手机上显示的时候,就有滚动条
+        如果用max-width的话,就可以避免
+
+4.实现self_logo的时候,用position:relative right:20px top:20px;
+    然而 他却不是距离外边框或者是浏览器的宽度左移,而是不知道以哪个对齐???
+
+5.关于中间栏自动宽度,没有解决,而是用了一个相对较笨的方法,固定左右边距....
+*/
+.wallpaper{
+    position:relative;
+    padding:20px;
+    background-color:#eee;
+    border:1px outset #999;
+    overflow:auto;
+}
+
+.team{
+    border:1px outset #999;
+    width:200px;
+    background-color:white;
+    padding:20px;
+    float:left;
+}
+.team img{
+    width:80px;
+    height:80px;
+    background-color:#eee;
+    border:1px outset #999;
+}
+.self_logo{
+    border:1px outset #999;
+    width:120px;
+    float:right;
+    background-color:white;
+    
+}
+.self_logo img{
+    width:80px;
+    height:80px;
+    margin:20px;
+}
+.team_introduce{
+    
+    margin-left:260px;
+    margin-right:140px;
+    padding:20px;
+    border:1px outset #999;
+    background-color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:18px;
+    
+   
+}
